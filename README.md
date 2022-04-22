@@ -11,7 +11,7 @@ The HTML character encoder converts all reserved characters to their correspondi
 This converter automates the entire process and lets the user copy encoded/decoded content.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/103118542/164681910-8b5fadaa-85b6-4e9d-a89d-cda34004f6a1.png" width="500">
+<img src="https://user-images.githubusercontent.com/103118542/164681910-8b5fadaa-85b6-4e9d-a89d-cda34004f6a1.png" width="300">
 </p>
 
 ## Functionality
