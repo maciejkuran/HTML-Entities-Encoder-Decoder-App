@@ -20,7 +20,6 @@ clearBtn.addEventListener('click', () => {
 encodeBtn.addEventListener('click', () => {
   output = encode(entityInput.value);
   entityOutput.textContent = output;
-  // entityOutput.innerHTML = output.replace(/\n\r?/g, '<br />');
   entityConversionInfo.textContent = 'Encoded text result';
   encoderDecoderCopyBtn.style.border = '';
   encoderDecoderCopyBtn.style.color = '';
