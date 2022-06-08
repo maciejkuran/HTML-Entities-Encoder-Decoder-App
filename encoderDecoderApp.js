@@ -7,6 +7,29 @@ const entityConversionInfo = document.querySelector('.entityConversionInfo');
 const encoderDecoderCopyBtn = document.querySelector('.encoderDecoderCopyBtn');
 let output = '';
 
+//Encode function
+const encode = (x) => {
+  x = x.replaceAll('&', '&amp;');
+  x = x.replaceAll('<', '&lt;');
+  x = x.replaceAll('>', '&gt;');
+  x = x.replaceAll('"', '&quot;');
+  return x;
+};
+
+//Decode function
+const decode = (x) => {
+  x = x.replaceAll('&amp;', '&');
+  x = x.replaceAll('&lt;', '<');
+  x = x.replaceAll('&gt;', '>');
+  x = x.replaceAll('&quot;', '"');
+  return x;
+};
+
+//Copy to clipboard function
+const copyToClipboard = (x) => {
+  if (navigator.clipboard.writeText) return navigator.clipboard.writeText(x);
+};
+
 //Clear Entity Input & Output Value
 clearBtn.addEventListener('click', () => {
   entityInput.value = '';
@@ -42,25 +65,3 @@ encoderDecoderCopyBtn.addEventListener('click', () => {
   encoderDecoderCopyBtn.style.color = '#02c2a9';
 });
 
-//Encode function
-const encode = (x) => {
-  x = x.replaceAll('&', '&amp;');
-  x = x.replaceAll('<', '&lt;');
-  x = x.replaceAll('>', '&gt;');
-  x = x.replaceAll('"', '&quot;');
-  return x;
-};
-
-//Decode function
-const decode = (x) => {
-  x = x.replaceAll('&amp;', '&');
-  x = x.replaceAll('&lt;', '<');
-  x = x.replaceAll('&gt;', '>');
-  x = x.replaceAll('&quot;', '"');
-  return x;
-};
-
-//Copy to clipboard function
-const copyToClipboard = (x) => {
-  if (navigator.clipboard.writeText) return navigator.clipboard.writeText(x);
-};
