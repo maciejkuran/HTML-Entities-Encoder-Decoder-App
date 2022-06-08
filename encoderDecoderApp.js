@@ -23,7 +23,6 @@ encodeBtn.addEventListener('click', () => {
   entityConversionInfo.textContent = 'Encoded text result';
   encoderDecoderCopyBtn.style.border = '';
   encoderDecoderCopyBtn.style.color = '';
-  textLineBreaks(output);
 });
 
 //Decoding
